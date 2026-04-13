@@ -64,15 +64,17 @@ import React from 'react';
 
 import Parent from "./props/Parent";
 import Ifelse from './ConditionalRendering/Ifelse';
-import Ternary from './ConditionalRendering/Ternary';
+// import Ternary from './ConditionalRendering/Ternary';
+import UseStateone from './hooks/UseStateone';
 function App(){
   return(
     <>
     <Parent/>
     <Ifelse/>
-    <Ternary/>
+    {/* <Ternary/> */}
+    <UseStateone/>
     </>
-  )
+  );
 }
 export default App
 
