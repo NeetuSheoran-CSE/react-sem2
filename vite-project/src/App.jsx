@@ -66,6 +66,8 @@ import Parent from "./props/Parent";
 import Ifelse from './ConditionalRendering/Ifelse';
 // import Ternary from './ConditionalRendering/Ternary';
 import UseStateone from './hooks/UseStateone';
+import ShowHide from './hooks/ShowHide';
+import DarkLight from './hooks/DarkLight';
 function App(){
   return(
     <>
@@ -73,6 +75,8 @@ function App(){
     <Ifelse/>
     {/* <Ternary/> */}
     <UseStateone/>
+    <ShowHide/>
+    <DarkLight/>
     </>
   );
 }
