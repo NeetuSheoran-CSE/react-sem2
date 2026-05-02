@@ -3,6 +3,8 @@
 // // import './style/Navbar.css'
 
 // const Navbar = () => {
+
+//   const { theme, toggleTheme } = useContext(ThemeContext);
 //   return (
 //     <div>
 //       <Link to = "/">Home</Link>
@@ -17,11 +19,13 @@
 
 // export default Navbar
 
- import { useState } from "react";
+ import { useState , useEffect, useContext} from "react";
 import { NavLink } from "react-router-dom";
 import "../style/Navbar.css";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,6 +36,10 @@ const Navbar = () => {
           <span className="logo-dot"></span>
           MyApp
         </NavLink>
+
+        <button onClick={toggleTheme}>
+        Switch to {theme === "light" ? "Dark 🌙" : "Light ☀️"}
+      </button>
 
         <ul className="nav-links">
           <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>

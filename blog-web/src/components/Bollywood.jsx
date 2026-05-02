@@ -14,7 +14,7 @@ const Bollywood = () => {
       <>
       <Link to = {`/post/${bollydata.id}`}>
         <h1>{bollydata.title}</h1>
-      <img src={bollydata.img_url}/>
+      <img src={bollydata.img_url} width='500' height='300'/>
       </Link>
       </>
     ))}

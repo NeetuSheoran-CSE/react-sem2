@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import Hollywood from './components/Hollywood'
@@ -9,8 +9,19 @@ import Fitness from './components/Fitness'
 import Navbar from './components/Navbar'
 import Details from './components/Details'
 
+import { useContext } from 'react'
+import { ThemeContext } from './context/ThemeContext'
+
 function App() {
+
+  const {theme}=useContext(ThemeContext)
+
+
   return (
+    
+    <div className={theme}>
+
+
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -23,6 +34,8 @@ function App() {
         <Route path='/post/:id' element={<Details />} />
       </Routes>
     </BrowserRouter>
+     </div>
+    
   );
 }
 
